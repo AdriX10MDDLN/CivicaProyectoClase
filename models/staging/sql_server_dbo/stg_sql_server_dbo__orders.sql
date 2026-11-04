@@ -8,6 +8,7 @@ renamed as (
         , address_id
         , promo_id
         , created_at as created_at_utc
+        , delivered_at as delivered_at_utc
         , estimated_delivery_at as estimated_delivery_at_utc
         , tracking_id
         , shipping_service
