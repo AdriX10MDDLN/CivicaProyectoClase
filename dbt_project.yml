@@ -28,6 +28,11 @@ docs-paths: ["docs"]
 
 clean-targets: ["target", "dbt_packages"]
 
+
+# dbt_project.yml - hook ej3 dia 06
+on-run-end:
+  - "{{ log_run_summary(results) }}"
+
 # =============================================================================
 # Modelos · arquitectura Medallion Cívica
 # =============================================================================
