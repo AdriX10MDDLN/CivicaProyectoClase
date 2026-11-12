@@ -102,6 +102,8 @@ models:
         +schema: core
         +meta:
           owner: equipo-datos-core
+        +grants:
+          select: ['REPORTING_ROLE']
         # Dimensiones y hechos compartidos: cualquiera puede usarlos
         +group: core
         +access: public
@@ -110,17 +112,23 @@ models:
         +meta:
           owner: equipo-marketing-analytics
         +group: marketing
+        +grants:
+          select: ['REPORTING_ROLE']
       product:
         +schema: product
         +meta:
           owner: equipo-producto
         +group: product
+        +grants:
+          select: ['REPORTING_ROLE']
 
       # Día 8 · grants declarativos (alternativa a la macro grant_select_on_gold).
       # dbt aplica el grant cada vez que construye el modelo. Descomenta y pon un
       # rol que exista en tu cuenta de Snowflake, o el build fallará:
       # +grants:
       #   select: ['REPORTING_ROLE']
+
+
 
 # =============================================================================
 # Seeds
