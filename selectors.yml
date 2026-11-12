@@ -28,9 +28,3 @@ selectors:
         - exclude:
             - method: resource_type
               value: snapshot
-
-  - name: capa_staging
-    description: Todos los modelos de Staging (tag heredado de dbt_project.yml).
-    definition:
-      method: tag
-      value: staging
